@@ -1,5 +1,4 @@
 
-<img src="https://github.com/havahol/io-pages-test/assets/5363644/c4adf260-9282-4cda-834a-e9d9c70eeb2c" width=500>
 <img src="https://github.com/havahol/io-pages-test/assets/5363644/673ca82e-dc40-456b-8d49-4d29084f685a" width=500>
 
  
