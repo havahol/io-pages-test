@@ -14,6 +14,8 @@ The
 * Online drift trajectory of (ensembles of) drifting objects
 * Tailored data-assimilation methods for sparse in-situ observations
 
+## Installation
+See here.
 
 ## Academic publications using GPU Ocean
 * H. Holm, F. Beiser, *Reducing Numerical Artifacts by Sacrificing Well-Balance for Rotational Shallow-Water Flow*. Accepted for publication in the proceedings of the conference Finite Volumes for Complex Applications 10, 2023
