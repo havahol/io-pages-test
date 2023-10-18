@@ -4,7 +4,11 @@
  
 A GPU-accelerated simulation framework for running large ensembles of simplified ocean models for real-world domains.
 
-GPU Ocean is a GPU-accelerated framework for running large ensembles of simplified ocean models for probabilistic drift trajectory forecasting. The ocean model is based on the shallow-water equations in a rotating frame of reference, and hence describes the barotropic dynamics of the ocean. This mathematical model is very well-suited for implementation on GPU, which enables efficient simulations and a well-suited model for investigating in ensemble-based probabilistic forecasting. It supports nesting within the results of operational 3D ocean models. This means that it uses the operational model for initial and boundary conditions, terrain data (bathymetry and coast line), and wind forcing, and online simulation of drift trajectories. Furthermore, the framework contains implementations of several ensemble-based data assimilation methods for efficient assimilation of point-based observations of ocean currents. 
+GPU Ocean is a GPU-accelerated framework for running large ensembles of simplified ocean models for probabilistic drift trajectory forecasting. 
+
+The GPU Ocean model is based on the shallow-water equations in a rotating frame of reference, and hence describes the barotropic dynamics of the ocean. 
+
+This mathematical model is very well-suited for implementation on GPU, which enables efficient simulations and a well-suited model for investigating in ensemble-based probabilistic forecasting. It supports nesting within the results of operational 3D ocean models. This means that it uses the operational model for initial and boundary conditions, terrain data (bathymetry and coast line), and wind forcing, and online simulation of drift trajectories. Furthermore, the framework contains implementations of several ensemble-based data assimilation methods for efficient assimilation of point-based observations of ocean currents. 
 
 The 
 
@@ -13,16 +17,17 @@ The
 * Running large ensembles with optional use of MPI for distributed memory parallelization
 * Online drift trajectory of (ensembles of) drifting objects
 * Tailored data-assimilation methods for sparse in-situ observations
+* Python code base with CUDA performance
 
 ## Installation
 See here.
 
 ## Academic publications using GPU Ocean
-* H. Holm, F. Beiser, *Reducing Numerical Artifacts by Sacrificing Well-Balance for Rotational Shallow-Water Flow*. Accepted for publication in the proceedings of the conference Finite Volumes for Complex Applications 10, 2023
+* H. Holm, F. Beiser, *Reducing Numerical Artifacts by Sacrificing Well-Balance for Rotating Shallow-Water Flow*. In: Franck, E., Fuhrmann, J., Michel-Dansac, V., Navoret, L. (eds) Finite Volumes for Complex Applications X — Volume 2, Hyperbolic and Related Problems. FVCA 2023. Springer Proceedings in Mathematics & Statistics, vol 433. Springer, Cham. DOI: [10.1007/978-3-031-40860-1_19](https://doi.org/10.1007/978-3-031-40860-1_19)
 *	A. Brodtkorb, H. Holm, *Coastal Ocean Forecasting on the GPU using a Two-Dimensional Finite Volume Scheme*. Tellus A: Dynamic Meteorology and Oceanography, 73:1, 1-22, DOI: [10.1080/16000870.2021.1876341](https://doi.org/10.1080/16000870.2021.1876341) [Preprint: [arXiv:1912.02457](https://arxiv.org/abs/1912.02457)]
 *	H. Holm, A. Brodtkorb, M. Sætra, *Data Assimilation for Ocean Drift Trajectories Using Massive Ensembles and GPUs*. In: Klöfkorn, R., Keilegavlen, E., Radu, F.A., Fuhrmann, J. (eds) Finite Volumes for Complex Applications IX - Methods, Theoretical Aspects, Examples. FVCA 2020. Springer Proceedings in Mathematics & Statistics, vol 323. Springer, Cham. DOI: [10.1007/978-3-030-43651-3_68](https://doi.org/10.1007/978-3-030-43651-3_68)
 *	H. Holm, M. Sætra, P. van Leeuwen, *Massively parallel implicit-equal weights particle filter for ocean drift trajectory forecasting*. Journal of Computational Physics: X, volume 6, 100053, 2020. DOI: [10.1016/j.jcpx.2020.100053](https://doi.org/10.1016/j.jcpx.2020.100053) [Preprint: [arXiv:1910.01031](https://arxiv.org/abs/1910.01031)]
-* 	H. Holm, A. Brodtkorb, K. Christensen, G. Broström, M. Sætra, *Evaluation of selected finite-difference and finite-volume approaches to rotational shallow-water flow*. Communications in Computational Physics, volume 27, pp. 1234-1274, 2020. DOI: [10.4208/cicp.OA-2019-0033](https://doi.org/10.4208/cicp.OA-2019-0033)
+* H. Holm, A. Brodtkorb, K. Christensen, G. Broström, M. Sætra, *Evaluation of selected finite-difference and finite-volume approaches to rotational shallow-water flow*. Communications in Computational Physics, volume 27, pp. 1234-1274, 2020. DOI: [10.4208/cicp.OA-2019-0033](https://doi.org/10.4208/cicp.OA-2019-0033)
 * H. Holm, A. Brodtkorb, M. Sætra, *GPU Computing with Python: Performance, Energy Efficiency and Usability*. Computation, volume 8, number 1:4, 2020 (Special issue on Energy-Efficient Computing on Parallel Architectures) DOI: [10.3390/computation8010004](https://doi.org/10.3390/computation8010004). [Preprint: [arXiv:1912.02607](https://arxiv.org/abs/1912.02607)]
 *	H. Holm, A. Brodtkorb, M. Sætra, *Performance and energy efficiency of CUDA and OpenCL for GPU computing using Python*. Advances in Parallel Computing, volume 36, pp. 593-604, 2020. DOI: [10.3233/APC200089](https://doi.org/10.3233/APC200089)
 
