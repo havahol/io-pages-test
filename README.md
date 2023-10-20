@@ -21,26 +21,6 @@ GPU Ocean is a simulation framework designed to explore the short-term uncertain
 
 GPU Ocean aims to be a powerful tool to complement ocean current forecasts through estimating and accounting for forecast uncertainties. By combining local observations and advanced data assimilation methods, users can make more informed decisions based on the latest oceanic data.
 
-# First draft below:
-
-<img src="https://github.com/havahol/io-pages-test/assets/5363644/673ca82e-dc40-456b-8d49-4d29084f685a" width=500>
-
-
-Operational ocean forecasting models are computationally expensive and are therefore often run as a single deterministic simulation at given intervals. This means that there are no information about the uncertainties associated to the forecast. Such uncertainties are of critical importance, for instance when the currents in the forecast is used to predict drift trajectories for search-and-rescue operations at sea.
-
-The idea behind GPU Ocean is to explore the short-term uncertainty in the forecasted ocean currents through running ensembles of simplified ocean models nested into the operational ocean forecast.
-The simplified ocean models contain barotropic dynamics as described by the rotating shallow-water equations, which can be solved very efficiently using GPUs. 
-This means that the ensemble prediction can be made very fast, and makes it possible to take advantage of available local observations of the real currents and adjusting the ensemble accordingly through appropriate data assimilation methods.
-Furthermore, drift trajectories can be computed directly within the ocean models themselves, meaning that we explore the uncertainty in the drift trajectories with respect to the uncertainty in the ocean currents directly. 
-
-Highlights:
-* GPU-accelerated implementations of state-of-the-art high-resolution finite-volume methods for solving the shallow-water equations
-* Initialisation, terrain data, forcing and boundary conditions can be read directly from NetCDF files containing operational 3D ocean forecasts
-* Running large ensembles with optional use of MPI for distributed memory parallelization
-* Online drift trajectory of (ensembles of) drifting objects
-* Tailored data-assimilation methods for sparse in-situ observations
-* Python code base with CUDA performance
-
 ## Installation
 See here.
 
