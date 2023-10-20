@@ -4,16 +4,16 @@
  
 A GPU-accelerated simulation framework for running large ensembles of simplified ocean models for real-world domains.
 
-GPU Ocean is a GPU-accelerated framework for running large ensembles of simplified ocean models for probabilistic drift trajectory forecasting. 
+Operational ocean forecasting models are computationally expensive and are therefore often run as a single deterministic simulation at given intervals. This means that there are no information about the uncertainties associated to the forecast. Such uncertainties are of critical importance, for instance when the currents in the forecast is used to predict drift trajectories for search-and-rescue operations at sea.
 
-The GPU Ocean model is based on the shallow-water equations in a rotating frame of reference, and hence describes the barotropic dynamics of the ocean. 
+The idea behind GPU Ocean is to explore the short-term uncertainty in the forecasted ocean currents through running ensembles of simplified ocean models nested into the operational ocean forecast.
+The simplified ocean models contain barotropic dynamics as described by the rotating shallow-water equations, which can be solved very efficiently using GPUs. 
+This means that the ensemble prediction can be made very fast, and makes it possible to take advantage of available local observations of the real currents and adjusting the ensemble accordingly through appropriate data assimilation methods.
+Furthermore, drift trajectories can be computed directly within the ocean models themselves, meaning that we explore the uncertainty in the drift trajectories with respect to the uncertainty in the ocean currents directly. 
 
-This mathematical model is very well-suited for implementation on GPU, which enables efficient simulations and a well-suited model for investigating in ensemble-based probabilistic forecasting. It supports nesting within the results of operational 3D ocean models. This means that it uses the operational model for initial and boundary conditions, terrain data (bathymetry and coast line), and wind forcing, and online simulation of drift trajectories. Furthermore, the framework contains implementations of several ensemble-based data assimilation methods for efficient assimilation of point-based observations of ocean currents. 
-
-The 
-
-* GPU-accelerated implementations of state-of-the-art high-resolution finite-volume methods
-* Initialisation, forcing and boundary conditions from NetCDF containing operational 3D ocean forecasts
+Highlights:
+* GPU-accelerated implementations of state-of-the-art high-resolution finite-volume methods for solving the shallow-water equations
+* Initialisation, terrain data, forcing and boundary conditions can be read directly from NetCDF files containing operational 3D ocean forecasts
 * Running large ensembles with optional use of MPI for distributed memory parallelization
 * Online drift trajectory of (ensembles of) drifting objects
 * Tailored data-assimilation methods for sparse in-situ observations
