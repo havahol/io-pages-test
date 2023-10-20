@@ -2,7 +2,29 @@
 <img src="https://github.com/havahol/io-pages-test/assets/5363644/673ca82e-dc40-456b-8d49-4d29084f685a" width=500>
 
  
-A GPU-accelerated simulation framework for running large ensembles of simplified ocean models for real-world domains.
+**A GPU-accelerated simulation framework for running large ensembles of simplified ocean models for real-world domains.**
+
+Operational ocean forecasting models are computationally expensive and are therefore often run as a single deterministic simulation at given intervals. This means that often lack information about forecast uncertainties, which are significant given that there are relative few observations of the ocean compared to its sheer size. Information on uncertainty is, however, vital for various applications, including search-and-rescue operations at sea.
+
+### What is GPU Ocean?
+GPU Ocean is a simulation framework designed to explore the short-term uncertainty in forecasted ocean currents. It achieves this by running ensembles of simplified ocean models nested within operational ocean forecasts. These simplified models efficiently solve barotropic dynamics described by the shallow-water equations using GPUs.
+
+### Key Features:
+
+* **Efficient simulation:** GPU Ocean utilizes GPU acceleration and state-of-the-art finite-volume methods to solve shallow-water equations efficiently.
+* **Model nesting:**  Easily import initialization data, terrain information, forcing, and boundary conditions from NetCDF files containing operational 3D ocean forecasts.
+* **Drift trajectory prediction:** Conduct online drift trajectory simulations for drifting objects within the ocean models, directly assessing uncertainty in drift trajectories concerning ocean current uncertainties.
+* **Data Assimilation**: GPU Ocean includes tailored data-assimilation methods for sparse in-situ observations.
+* **Python with CUDA Performance**: Rapid prototyping and easy orchestration, pre-, and post-processing using Python while getting the computational performance of CUDA.
+* **Parallel Processing:** MPI support for running even larger ensembles on multiple GPUs. 
+
+
+GPU Ocean aims to be a powerful tool to complement ocean current forecasts through estimating and accounting for forecast uncertainties. By combining local observations and advanced data assimilation methods, users can make more informed decisions based on the latest oceanic data.
+
+# First draft below:
+
+<img src="https://github.com/havahol/io-pages-test/assets/5363644/673ca82e-dc40-456b-8d49-4d29084f685a" width=500>
+
 
 Operational ocean forecasting models are computationally expensive and are therefore often run as a single deterministic simulation at given intervals. This means that there are no information about the uncertainties associated to the forecast. Such uncertainties are of critical importance, for instance when the currents in the forecast is used to predict drift trajectories for search-and-rescue operations at sea.
 
